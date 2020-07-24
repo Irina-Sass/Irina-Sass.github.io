@@ -3,7 +3,7 @@
 }
 
 .project__link_type_code::before {
-  background-image: url(../../../../images/Logo_github.png);
+  background-image: url(../../../../images/logo_github.png);
 }
 
 @media (max-width: 770px) {

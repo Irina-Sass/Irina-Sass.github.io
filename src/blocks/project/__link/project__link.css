@@ -1,0 +1,29 @@
+@import url(_type_code/project__link_type_code.css);
+@import url(_type_play/project__link_type_play.css);
+
+.project__link {
+  color: #828282;
+  display: block;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  line-height: 30px;
+  justify-content: center;
+  position: relative;
+  padding-left: 37px;
+}
+
+.project__link:hover {
+  text-decoration: underline;
+}
+
+.project__link::before {
+  display: block;
+  content: '';
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+}

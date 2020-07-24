@@ -1,0 +1,8 @@
+.contacts__info {
+  display: block;
+  padding-bottom: 30px;
+}
+
+.contacts__info:first-of-type {
+  padding-bottom: 0;
+}

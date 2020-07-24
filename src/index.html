@@ -3,11 +3,206 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Webpack</title>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ирина Сасс">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>" </head>
 
-<body>
-    <h1>Hello</h1>
+<body style="scroll-behavior: smooth;">
+    <div class="page">
+        <div class="content">
+            <header class="header section">
+                <nav class="nav">
+                    <input type="checkbox" id="toggle" class="nav__toggle">
+                    <label for="toggle" class="nav__button"><span class="nav__button-icon"></span></label>
+                    <ul class="menu-row">
+                        <li class="menu-row__item"><a href="/" target="_self" class="link
+                                menu-row__link menu-row__link_active text text_weight_bold">Главная</a>
+                        </li>
+                        <li class="menu-row__item"><a href="#about-me" target="_self" class="link menu-row__link text
+                                text_weight_bold">Обо мне</a>
+                        </li>
+                        <li class="menu-row__item"><a href="#skills" target="_self" class="link menu-row__link text
+                                text_weight_bold">Навыки</a>
+                        </li>
+                        <li class="menu-row__item"><a href="#portfolio" target="_self" class="link menu-row__link text
+                                text_weight_bold">Портфолио</a>
+                        </li>
+                        <li class="menu-row__item"><a href="#contacts" target="_self" class="link menu-row__link text
+                                text_weight_bold">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="main">
+                <section class="lead section">
+                    <div class="lead__wrapper">
+                        <h1 class="title title_size_big lead__title">Ирина Сасс</h1>
+                        <p class="text lead__profession">Фронтенд-разработчик</p>
+                        <p class="lead__contacts">
+                            <a class="link text lead__contact" href="tel:+79133185971">Тел.: +7 (913) 318 59 71</a>
+                            <a class="link text lead__contact" href="mailto:irina.sass@yandex.ru">Email:
+                                irina.sass@ya.ru</a>
+                        </p>
+                    </div>
+                    <picture class="lead__container-photo">
+                        <source
+                            srcset="<%=require('./images/photo-author-2x.jpg').default%> 2x, <%=require('./images/photo-author.jpg').default%> 1x"
+                            class="lead__photo">
+                        <img src="<%=require('./images/photo-author.jpg').default%>" alt="фото" class="lead__photo">
+                    </picture>
+                </section>
+                <section class="about-me section" id="about-me">
+                    <h2 class="title title_size_middle about-me__title">Обо мне</h2>
+                    <p class="text about-me__text">Меня зовут Ирина Сасс.</p>
+                    <p class="text about-me__text">Я Прошла курс Яндекс.Практикума по
+                        специальности фронтенд-разработчик, где изучала HTML5, CSS3 и JavaScript.</p>
+                    <p class="text about-me__text">Научилась верстать
+                        адаптивные и кроссбраузерные сайты, собирать проекты с помощью Webpack, работать с системой
+                        контроля версий Git, а также писать код по БЭМ методологии.</p>
+                </section>
+                <section class="skills section" id="skills">
+                    <h2 class="title title_size_middle">Навыки</h2>
+                    <div class="tech-container">
+                        <div class="tech-item">
+                            <p class="text tech-item__name">HTML</p>
+                            <img src="<%=require('./images/html.png').default%>" alt="HTML" class="tech-item__logo">
+                        </div>
+                        <div class="tech-item">
+                            <p class="text tech-item__name">CSS</p>
+                            <img src="<%=require('./images/css.png').default%>" alt="CSS" class="tech-item__logo">
+                        </div>
+                        <div class="tech-item">
+                            <p class="text tech-item__name">JavaScript</p>
+                            <img src="<%=require('./images/js.png').default%>" alt="JavaScript" class="tech-item__logo">
+                        </div>
+                        <div class="tech-item">
+                            <p class="text tech-item__name">Webpack</p>
+                            <img src="<%=require('./images/webpack.png').default%>" alt="Webpack"
+                                class="tech-item__logo">
+                        </div>
+                        <div class="tech-item">
+                            <p class="text tech-item__name">Git</p>
+                            <img src="<%=require('./images/git.png').default%>" alt="Git" class="tech-item__logo">
+                        </div>
+                    </div>
+                </section>
+                <section class="portfolio section" id="portfolio">
+                    <h2 class="title title_size_middle">Портфолио</h2>
+                    <div class="project">
+                        <h3 class="title title_size_small">Cafe Burger House</h3>
+                        <a href="https://irina-sass.github.io/Cafe-Burger-Template/" target="_blank" class="link">
+                            <img src="<%=require('./images/project1.jpg').default%>" alt="Первый проект"
+                                class="project__image">
+                        </a>
+                        <p class="project__description text">Одностраничный сайт (landing page) бургерной - Burger
+                            House. Сайт адаптирован для различных разрешений экранов. Разделы "Фирменные блюда" и "Меню"
+                            реализованы с помощью слайдера Swiper; фотогалерея сделана с помощью лайтбокса Tobii;
+                            добавлен фрагмент карты. Проект собирается с помощью Webpack.</p>
+
+                        <div class="project__links">
+                            <a href="https://github.com/Irina-Sass/Cafe-Burger-Template" target="_blank"
+                                class="text link project__link project__link_type_code">Посмотреть
+                                код</a>
+                            <a href="https://irina-sass.github.io/Cafe-Burger-Template/" target="_blank"
+                                class="text link project__link project__link_type_play">Посмотреть
+                                проект</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3 class="title title_size_small">News-Analyzer</h3>
+                        <a href="https://irina-sass.github.io/News-Analyzer/" target="_blank" class="link">
+                            <img src="<%=require('./images/project2.jpg').default%>" alt="Второй проект"
+                                class="project__image">
+                        </a>
+                        <p class="project__description text">Сервис, позволяющий находить все статьи по запросу за
+                            последнюю неделю и анализировать на диаграмме популярность темы. Сервис работает c API
+                            newsapi.org и github.com. Блок "История коммитов из GitHub" реализован с помощью слайдера
+                            Swiper. Проект собирается с помощью Webpack.</p>
+                        <div class="project__links">
+                            <a href="https://github.com/Irina-Sass/News-Analyzer" target="_blank"
+                                class="text link project__link project__link_type_code">Посмотреть
+                                код</a>
+                            <a href="https://irina-sass.github.io/News-Analyzer/" target="_blank"
+                                class="text link project__link project__link_type_play">Посмотреть
+                                проект</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3 class="title title_size_small">Mesto</h3>
+                        <a href="https://irina-sass.github.io/Mesto/" target="_blank" class="link">
+                            <img src="<%=require('./images/project3.jpg').default%>" alt="Третий проект"
+                                class="project__image">
+                        </a>
+                        <p class="project__description text">"Mesto" — интерактивная страница, куда можно добавлять
+                            фотографии, удалять их, ставить лайки, редактировать профиль, взаимодействуя с API.
+                            Настроена валидация форм. Проект собирается с помощью Webpack. JS-код разбит на модули.</p>
+                        <div class="project__links">
+                            <a href="https://github.com/Irina-Sass/Mesto" target="_blank"
+                                class="text link project__link project__link_type_code">Посмотреть
+                                код</a>
+                            <a href="https://irina-sass.github.io/Mesto/" target="_blank"
+                                class="text link project__link project__link_type_play">Посмотреть
+                                проект</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3 class="title title_size_small">Travel to Russia</h3>
+                        <a href="https://irina-sass.github.io/landingpage-travel-to-Russia/" target="_blank"
+                            class="link">
+                            <img src="<%=require('./images/project4.jpg').default%>" alt="Четвертый проект"
+                                class="project__image">
+                        </a>
+                        <p class="project__description text">Одностраничный сайт (landing page) о путешествиях по
+                            стране. Сайт адаптирован для различных разрешений экранов.</p>
+                        <div class="project__links">
+                            <a href="https://github.com/Irina-Sass/landingpage-travel-to-Russia" target="_blank"
+                                class="text link project__link project__link_type_code">Посмотреть
+                                код</a>
+                            <a href="https://irina-sass.github.io/landingpage-travel-to-Russia/" target="_blank"
+                                class="text link project__link project__link_type_play">Посмотреть
+                                проект</a>
+                        </div>
+                    </div>
+
+                </section>
+                <section class=" contacts section" id="contacts">
+                    <h2 class="title title_size_middle contacts__title">Контакты</h2>
+                    <h3 class="title title_size_small">Ирина Сасс</h3>
+                    <p class="text text_weight_bold contacts__profession">Фронтенд-разработчик</p>
+
+                    <a class="link text text_weight_bold contacts__info" href="tel:+79133185971">Тел.: +7 (913) 318 59
+                        71</a>
+                    <a class="link text text_weight_bold contacts__info" href="mailto:irina.sass@yandex.ru">Email:
+                        irina.sass@ya.ru</a>
+
+                    <p class="text">Хотите узнать больше или просто пообщаться?</p>
+                    <p class="text">Добро пожаловать!</p>
+                    <a class="contacts__button text link" href="mailto:irina.sass@yandex.ru">Отправить сообщение</a>
+                    <div class="contacts__links">
+                        <a href="https://novokuznetsk.hh.ru/resume/5250a685ff0806fdf40039ed1f75705336674a"
+                            target="_blank" class="contacts__link"><img
+                                src="<%=require('./images/logo_hh.png').default%>" alt="HH"
+                                class="contacts__link-icon"></a>
+                        <a href="https://github.com/Irina-Sass" target="_blank" class="contacts__link"><img
+                                src="<%=require('./images/logo_github.png').default%>" alt="github"
+                                class="contacts__link-icon"></a>
+                        <a href="https://www.linkedin.com/in/irina-sass/" target="_blank" class="contacts__link"><img
+                                src="<%=require('./images/logo_linkedin.png').default%>" alt="linkedin"
+                                class="contacts__link-icon"></a>
+                        <a href="https://t.me/Irina_Sass" target="_blank" class="contacts__link"><img
+                                src="<%=require('./images/logo_telegram.png').default%>" alt="telegram"
+                                class="contacts__link-icon"></a>
+
+                    </div>
+                </section>
+            </main>
+            <footer class="footer section">
+                <p class="text footer__text"> &COPY; Ирина Сасс, <span id="year"></span></p>
+            </footer>
+        </div>
+    </div>
+
     <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 </body>
 

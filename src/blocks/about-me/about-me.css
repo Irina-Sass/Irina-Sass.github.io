@@ -1,0 +1,6 @@
+@import url(__title/about-me__title.css);
+@import url(__text/about-me__text.css);
+
+.about-me {
+  background-color: #f6f6f6;
+}

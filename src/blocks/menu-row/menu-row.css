@@ -1,0 +1,31 @@
+@import url(__link/menu-row__link.css);
+@import url(__item/menu-row__item.css);
+
+.menu-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+@media (max-width: 770px) {
+  .menu-row {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: -180px;
+    transition: top 0.4s;
+  }
+
+  .nav__toggle:checked ~ .menu-row {
+    top: 0px;
+    padding-top: 32px;
+    padding-bottom: 25px;
+    width: calc(100%+80px);
+    left: -40px;
+    background-color: #f6f6f6;
+  }
+}

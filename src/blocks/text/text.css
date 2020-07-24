@@ -1,0 +1,14 @@
+@import url(_weight_bold/text_weight_bold.css);
+
+.text {
+  font-family: 'Comfortaa', 'Arial', 'Helvetica', 'Nimbus Sans L', sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+}
+
+@media (max-width: 770px) {
+  .text {
+    font-size: 16px;
+  }
+}

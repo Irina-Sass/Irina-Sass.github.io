@@ -1,0 +1,22 @@
+.section {
+  padding: 100px 250px;
+  color: #070707;
+}
+
+@media (max-width: 1324px) {
+  .section {
+    padding: 100px 150px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .section {
+    padding: 60px 80px;
+  }
+}
+
+@media (max-width: 770px) {
+  .section {
+    padding: 60px 40px;
+  }
+}

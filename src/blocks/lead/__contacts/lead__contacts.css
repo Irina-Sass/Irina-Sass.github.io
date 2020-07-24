@@ -1,0 +1,11 @@
+.lead__contacts {
+  text-align: end;
+  margin: 0;
+}
+
+@media (max-width: 576px) {
+  .lead__contacts {
+    padding-top: 20px;
+    text-align: center;
+  }
+}

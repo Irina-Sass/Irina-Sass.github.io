@@ -1,0 +1,11 @@
+@import url(__description/project__description.css);
+@import url(__links/project__links.css);
+@import url(__link/project__link.css);
+@import url(__image/project__image.css);
+
+.project {
+  width: 90%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}

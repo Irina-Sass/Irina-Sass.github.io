@@ -1,0 +1,20 @@
+.menu-row__item {
+  color: #828282;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menu-row__item:hover {
+  color: #070707;
+}
+
+@media (max-width: 770px) {
+  .menu-row__item {
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .menu-row__item:hover {
+    background-color: #eaeaea;
+  }
+}
